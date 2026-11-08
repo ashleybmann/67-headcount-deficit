@@ -17,10 +17,10 @@ The notebook has no external data files. Every figure is typed directly into the
 
 | Variable | Figure | Description |
 | --- | --- | --- |
-| `active_core` | 1 | Active roster seats per league: WNBA 15 teams × 12 = 180, NBA 30 teams × 15 = 450 |
-| `shock_absorbers` | 1 | Two-way contract seats: WNBA 0, NBA 30 teams × 3 = 90 |
+| `active_core` | 1, 4 | Active roster seats per league: WNBA 15 teams × 12 = 180, NBA 30 teams × 15 = 450 |
+| `shock_absorbers` | 1, 4 | Two-way contract seats: WNBA 0, NBA 30 teams × 3 = 90 |
 | `draft_retention` | 2 | Share of picks by draft round who made the opening roster, played more than 5 games in Year 1, and were still in the league in Year 2 |
-| `funnel_ratios` | 3 | Eligible NCAA D1 seniors per opening-night rookie seat: WNBA ~28, NBA ~12 |
+| `funnel_ratios` | 3, 4 | Eligible NCAA D1 seniors per opening-night rookie seat: WNBA ~28, NBA ~12 |
 
 ## Method
 
@@ -29,26 +29,21 @@ After a setup cell, the notebook has one cell per figure. Each cell also saves i
 1. **Capacity (`capacity.png`).** A stacked bar chart of total league seats. The NBA's 90 two-way contracts sit on top of its active rosters as a development buffer. The WNBA has no equivalent buffer.
 2. **Survival cliff (`survival_cliff.png`).** A grouped bar chart of draft retention by round for the 12-team era, when a 12-player roster limit capped the league at 144 seats. Each round shows three stages: opening-night roster, more than 5 games played in Year 1, and still in the league in Year 2.
 3. **Pipeline funnel (`pipeline_funnel.png`).** A bar chart comparing how many eligible NCAA D1 seniors there are for each opening-night rookie seat in each league.
+4. **Funnel and buffer (`funnel_and_buffer.png`).** Figures 3 and 1 side by side, with the funnel on the left. The README uses this chart in place of the two separate ones.
 
 ## Results
 
-**1. The missing buffer**
+**1. The bottleneck and the missing buffer**
 
-![League roster capacity](figures/capacity.png)
+![Pipeline funnel and league roster capacity](figures/funnel_and_buffer.png)
 
-The NBA has 540 seats, three times the WNBA's 180, and 90 of them are two-way development seats. The WNBA has no equivalent.
+About 28 eligible NCAA seniors compete for each WNBA rookie seat, compared with about 12 per NBA rookie seat, so the NBA funnel is roughly 2.3 times wider. The NBA also has more room once players arrive: it has 540 seats, three times the WNBA's 180, and 90 of them are two-way development seats. The WNBA has no equivalent buffer.
 
 **2. The survival cliff**
 
 ![Draft retention by round](figures/survival_cliff.png)
 
-In the 12-team era, fewer than half of second-round picks made an opening-night roster (48.2%) and about a quarter were still in the league in Year 2 (24.1%). For third-round picks those figures were 16.7% and 5.5%.
-
-**3. The pipeline funnel**
-
-![NCAA seniors per rookie seat](figures/pipeline_funnel.png)
-
-About 28 eligible NCAA seniors compete for each WNBA rookie seat, compared with about 12 per NBA rookie seat, so the NBA funnel is roughly 2.3 times wider. See [Caveats](#caveats) before drawing conclusions.
+In the 12-team era, fewer than half of second-round picks made an opening-night roster (48.2%) and about a quarter were still in the league in Year 2 (24.1%). For third-round picks those figures were 16.7% and 5.5%. See [Caveats](#caveats) before drawing conclusions.
 
 ## Getting started
 
